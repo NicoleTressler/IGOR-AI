@@ -2,13 +2,6 @@
 """
 finder_agent.py - a small AI agent that organizes a folder on your Mac.
 
-Design (plan -> validate -> execute -> undo):
-  1. SCAN     read file *metadata* only (name, type, size, date). No file contents.
-  2. PLAN     ask Claude for a JSON list of moves.
-  3. VALIDATE reject anything unsafe (outside the folder, overwrites, unknown files).
-  4. EXECUTE  dry-run by default; --apply actually moves files and writes an undo log.
-  5. UNDO     reverse the most recent run.
-
 The model never touches the filesystem. It only proposes; this code decides.
 There is deliberately no delete operation.
 
