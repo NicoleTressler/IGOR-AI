@@ -4,16 +4,6 @@ Organizes a messy folder (Downloads, Desktop, ...) using the Claude API.
 The model only *proposes* moves; the Python code validates and performs them.
 There is no delete operation, and every run can be undone.
 
-## Install (once)
-
-1. Get an API key at https://console.anthropic.com (API usage is billed separately from a Claude.ai subscription).
-2. In Terminal:
-   ```
-   cd path/to/finder-agent
-   ./install.sh
-   finder-agent setup        # paste key; stored in macOS Keychain
-   ```
-   If `finder-agent` isn't found, add `~/.local/bin` to your PATH (the installer prints the command).
 
 ## Use
 
